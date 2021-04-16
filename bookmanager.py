@@ -14,8 +14,6 @@ app.config["SQLALCHEMY_DATABASE_URI"] = database_file
 
 db = SQLAlchemy(app)
 
-app = Flask(__name__)
-
 class Book(db.Model):
     title = db.Column(db.String(80), unique=True, nullable=False, primary_key=True)
 
